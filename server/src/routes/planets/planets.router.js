@@ -1,10 +1,10 @@
 const express = require("express"); 
-const { getAllPlanets } = require("./planets.controller");
-const { loadPlanetsData } = require('../../models/planets.model');
+const { httpGetAllPlanets } = require("./planets.controller");
+// const { loadPlanetsData } = require('../../models/planets.model');
 
 const planetsRouter = express.Router();
 
-planetsRouter.get('/planets', getAllPlanets);
+planetsRouter.get('/planets', httpGetAllPlanets);
 
 // planetsRouter.get('/planets', async (req, res) => {
 //     try {
